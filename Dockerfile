@@ -1,0 +1,6 @@
+FROM python:3.9
+
+COPY . .
+RUN pip install django==3.2
+RUN python manage.py migrate
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
