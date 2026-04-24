@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    volumes:
+      - .:/app    # Yeh line aapke local code ko container ke /app se jorr degi
+    working_dir: /app
+    ports:
+      - "8000:8000"
